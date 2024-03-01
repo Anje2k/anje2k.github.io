@@ -1,13 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Secret Page</title>
+  <title>First Calculator</title>
 </head>
 <body>
-<h>You found this page?!</h>
-  <p>Get <a href="README.md">out</a> of here</p>
+  <h1>Look, it's a calculator!</h1>
+  <p>This is a webpage calculator hosted on GitHub Pages.</p>
+ 
+<br>
+<p> This is a <a href="README.md">secret</a> page</p>
+
 </body>
 </html>
-
