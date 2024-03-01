@@ -10,7 +10,7 @@
 </head>
 <body>
   <h1>Welcome to my webpage!</h1>
-  <p>This is a very basic webpage hosted on GitHub Pages.</p>
+  <p>This is a very semi-basic webpage hosted on GitHub Pages.</p>
 </body>
 </html>
 
