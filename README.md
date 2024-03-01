@@ -35,6 +35,8 @@
     <td><button onclick="handleOperator('/')">/</button></td>    
   </tr>
 </table>
+<br>
+<p> This is a <a href="aboutus.md">secret</a> page</p>
 
 </body>
 </html>
