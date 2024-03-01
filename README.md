@@ -24,9 +24,15 @@
   </tr>
   <tr>
     <td><button onclick="handleNumber('1')">1</button></td>
-    <td><button onclick="handleNumber('3')">2</button></td>
+    <td><button onclick="handleNumber('2')">2</button></td>
     <td><button onclick="handleNumber('3')">3</button></td>
-    <td><button onclick="handleEqual()">=</button></td>    
+    <td><button onclick="handleOperator('*')">*</button></td>    
+  </tr>
+  <tr>
+    <td><button onclick="handleEqual()">=</button></td>
+    <td><button onclick="handleNumber('0')">0</button></td>
+    <td><button onclick="clearDisplay()">C</button></td>
+    <td><button onclick="handleOperator('/')">/</button></td>    
   </tr>
 </table>
 
