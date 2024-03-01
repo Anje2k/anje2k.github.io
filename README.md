@@ -8,7 +8,7 @@
 <body>
   <h1>Look, it's a calculator!</h1>
   <p>This is a webpage calculator hosted on GitHub Pages.</p>
-  <p><input type="text" id="display"></p>
+  <p><input type="text" id="display" value="" readonly></p>
   <table>
   <tr>
     <td><button onclick="handleNumber('7')">7</button></td>
