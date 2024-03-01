@@ -26,7 +26,7 @@
     <td><button onclick="handleNumber('1')">1</button></td>
     <td><button onclick="handleNumber('2')">2</button></td>
     <td><button onclick="handleNumber('3')">3</button></td>
-    <td><button onclick="handleOperator('*')">*</button></td>    
+    <td><button onclick="handleEqual()">=</button></td>    
   </tr>
 </table>
 
