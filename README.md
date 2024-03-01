@@ -10,7 +10,7 @@
 </head>
 <body>
   <h1>Welcome to my webpage!</h1>
-  <p>This is a very semi-double-basic webpage hosted on GitHub Pages.</p>
+  <p>This is a very semi-double-basic-ish webpage hosted on GitHub Pages.</p>
 </body>
 </html>
 
@@ -25,4 +25,17 @@
   <button type="submit">Submit</button>
 </form>
 
+<script>
+  const form = document.getElementById("myForm");
+
+  form.addEventListener("submit", function(event) {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+
+    if (name === "" || email === "") {
+      alert("Please fill in all fields!");
+      event.preventDefault(); // Prevent form submission
+    }
+  });
+</script>
 
