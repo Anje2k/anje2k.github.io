@@ -1,16 +1,34 @@
-# anje2k.github.io
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Simple Webpage</title>
+  <title>First Calculator</title>
 </head>
 <body>
-  <h1>Welcome to my webpage!</h1>
-  <p>This is a very semi-double-basic-ish webpage hosted on GitHub Pages.</p>
+  <h1>Look, it's a calculator!</h1>
+  #<p>This is a very semi-double-basic-ish webpage hosted on GitHub Pages.</p>
+  <table>
+  <tr>
+    <td><button onclick="handleNumber('7')">7</button></td>
+    <td><button onclick="handleNumber('8')">8</button></td>
+    <td><button onclick="handleNumber('9')">9</button></td>
+    <td><button onclick="handleOperator('+')">+</button></td>
+  </tr>
+  <tr>
+    <td><button onclick="handleNumber('4')">4</button></td>
+    <td><button onclick="handleNumber('5')">5</button></td>
+    <td><button onclick="handleNumber('6')">6</button></td>
+    <td><button onclick="handleOperator('-')">-</button></td>
+  </tr>
+  <tr>
+    <td><button onclick="handleNumber('1')">1</button></td>
+    <td><button onclick="handleNumber('2')">2</button></td>
+    <td><button onclick="handleNumber('3')">3</button></td>
+    <td><button onclick="handleOperator('*')">*</button></td>    
+  </tr>
+</table>
+
 </body>
 </html>
 
@@ -35,6 +53,8 @@
     if (name === "" || email === "") {
       alert("Please fill in all fields!");
       event.preventDefault(); // Prevent form submission
+    } else {
+      
     }
   });
 </script>
