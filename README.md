@@ -7,7 +7,7 @@
 </head>
 <body>
   <h1>Look, it's a calculator!</h1>
-  <p>This is a very semi-double-basic-ish webpage hosted on GitHub Pages.</p>; // CAn I add stuff heree?
+  <p>This is a very semi-double-basic-ish webpage hosted on GitHub Pages.</p> # CAn I add stuff heree?
   <table>
   <tr>
     <td><button onclick="handleNumber('7')">7</button></td>
