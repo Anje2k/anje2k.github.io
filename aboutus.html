@@ -1,4 +1,15 @@
 
+<script>
+  const userName = localStorage.getItem("userName");
+  if (userName) {
+    document.getElementById("welcomeMsg").innerHTML = "Welcome, " + userName + "!";
+  } else {
+    document.getElementById("welcomeMsg").innerHTML = "Welcome, Guest!";
+  }
+</script>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,14 +49,5 @@
 
 </html>
 
-
-<script>
-  const userName = localStorage.getItem("userName");
-  if (userName) {
-    document.getElementById("welcomeMsg").innerHTML = "Welcome, " + userName + "!";
-  } else {
-    document.getElementById("welcomeMsg").innerHTML = "Welcome, Guest!";
-  }
-</script>
 
 
