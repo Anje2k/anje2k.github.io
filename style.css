@@ -1,0 +1,18 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-family: times-new-roman;
+  text-align: center;
+  color: green;
+  background-color: #f0f0f0;
+}
+
+p {
+  font-family: Arial;
+  text-align: left;
+  color: magenta;
+  
+}
