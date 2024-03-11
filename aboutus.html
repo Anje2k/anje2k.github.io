@@ -41,12 +41,12 @@
 
 
 <script>
-  const userName = localStorage.getItem("userName");
+  const userName = localStorage.getItem("userName") || "Guest";
   if (userName) {
     document.getElementById("welcomeMsg").innerHTML = "Welcome, " + userName + "!";
-  } else {
-    document.getElementById("welcomeMsg").innerHTML = "Welcome, Guest!";
-  }
+  } //else {
+    //document.getElementById("welcomeMsg").innerHTML = "Welcome, Guest!";
+  //}
 </script>
 
 
