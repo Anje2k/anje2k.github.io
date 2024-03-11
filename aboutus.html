@@ -12,6 +12,10 @@
   <p>This is a webpage calculator hosted on GitHub Pages.</p>
  
 <br>
+  <p id="welcomeMsg"></p>
+  <p>userName</p>
+  
+  
 <p> This is a <a href="calculator.html">calculator</a> page</p>
 
 
@@ -33,3 +37,15 @@
 </body>
 
 </html>
+
+
+<script>
+  const userName = localStorage.getItem("userName");
+  if (userName) {
+    document.getElementById("welcomeMsg").innerHTML = "Welcome, " + userName + "!";
+  } else {
+    document.getElementById("welcomeMsg").innerHTML = "Welcome, Guest!";
+  }
+</script>
+
+
