@@ -13,9 +13,13 @@
 <br>
 <table>
     <tr>
-        <td><button onclick="playerSpace('1')">"  "</button></td>
-        <td><button onclick="playerSpace('2')">"-"</button></td>
-        <td><button onclick="playerSpace('3')">.</button></td>
+        <td colspan="2"><button onclick="clearBoard()">Clear</button></td>
+        <td id="winnerMsg"></td>
+    </tr>
+    <tr>
+        <td><button onclick="playerSpace('1')"> </button></td>
+        <td id="spacer"><button onclick="playerSpace('2')"></button></td>
+        <td><button onclick="playerSpace('3')">id="spacer"</button></td>
     </tr>
 </table>
 
@@ -25,7 +29,11 @@
 
 
 <script>
-  const form = document.getElementById("nameForm");
+  const winnerMsg = "Me!";
+  const spacer = " ";
+  
+  
+  /*const form = document.getElementById("nameForm");
   form.addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent default form submission behavior
 
@@ -34,5 +42,5 @@
 
     // Optionally, redirect to another page after storing the name
     window.location.href = "aboutus.html";
-  });
+  });*/
 </script>
