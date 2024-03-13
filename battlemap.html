@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>This is the battlemap</h1>
-  <p>Right now it's just for Tic-Tac-Toe against a robit </p>
+  <p>Right now it's just for Tic-Tac-Toe against a robut </p>
   
 <br>
 <table>
@@ -16,20 +16,21 @@
         <td colspan="2"><button onclick="clearBoard()">Clear Board</button></td>
         <td>Empty</td>
     </tr>
+    <tr></tr>
     <tr>
-        <td><button onclick="playerSpace('1')"> - </button></td>
-        <td><button onclick="playerSpace('2')"> - </button></td>
-        <td><button onclick="playerSpace('3')"> - </button></td>
+        <td><button onclick="playerSpace('1')" id="buttonNum1" value="-"> - </button></td>
+        <td><button onclick="playerSpace('2')" id="buttonNum2" value="-"> - </button></td>
+        <td><button onclick="playerSpace('3')" id="buttonNum3" value="-"> - </button></td>
     </tr>
     <tr>
         <td><button onclick="playerSpace('4')" id="emptySpace"> - </button></td>
         <td><button onclick="playerSpace('5')" id="blankSpace"> - </button></td>
-        <td><button onclick="playerSpace('6')" id="display"> - </button></td>
+        <td><button onclick="playerSpace('6')" id="display" value=""> - </button></td>
     </tr>
     <tr>
         <td><button onclick="playerSpace('4')" id="emptySpace"></button></td>
         <td><button onclick="playerSpace('5')" id="blankSpace"></button></td>
-        <td><button onclick="playerSpace('6')" id="display"></button></td>
+        <td><button onclick="playerSpace('6')" id="display" value="H"></button></td>
     </tr>
     <tr>
         <td><button onclick="playerSpace('7')"> - </button></td>
@@ -44,6 +45,44 @@
 
 
 <script>
+    /*const button = document.getElementById("myButton");
+    let clickCount = 0;
+    const colors = ["blue", "red", "green", "yellow"]; // Array of colors for the button
+
+    button.addEventListener("click", function() {
+    clickCount++; // Increment click count on each click
+
+    // Update button text based on click count
+    if (clickCount % 4 === 0) {
+      this.textContent = "Click Me!";
+    } else {
+        this.textContent = "Clicked " + clickCount + " times!";
+    }
+
+    // Update button color based on click count (cycles through the colors array)
+    this.style.color = colors[clickCount % colors.length];
+    });*/
+  
+    function playerSpace(idNumber) {
+        let floatingID = "buttonNum" + idNumber;
+        let currentState = "-"
+        let newState = "O"
+        currentState = document.getElementById("floatingID").value;
+
+        if (currentState === "-") {
+            newState = "X";
+        } else if (currentState === "O") {
+            newState = "X";
+        } else if (currentState === "X") {
+            newState = "O";
+        }
+
+        document.getElementById("floatingID").value = newState;
+    }
+  
+  
+  
+  
   const winnerMsg = "Me!";
   const emptySpace = " - ";
   let blankSpace = " - ";
