@@ -8,13 +8,13 @@
 </head>
 <body>
   <h1>This is the battlemap</h1>
-  <p>Right now it's just for Tic-Tac-Toe against a robut </p>
+  <p>Right now it's just for Tic-Tac-Toe against a roboot </p>
   
 <br>
 <table>
     <tr>
         <td colspan="2"><button onclick="clearBoard()">Clear Board</button></td>
-        <td>Empty</td>
+        <td></td>
     </tr>
     <tr></tr>
     <tr>
@@ -64,10 +64,10 @@
     });*/
   
     function playerSpace(idNumber) {
-        let floatingID = "buttonNum" + idNumber;
+        //let floatingID = "buttonNum" + idNumber;
         let currentState = "-"
         let newState = "O"
-        currentState = document.getElementById("floatingID").value;
+        currentState = document.getElementById("buttonNum1").value;
 
         if (currentState === "-") {
             newState = "X";
@@ -77,7 +77,7 @@
             newState = "O";
         }
 
-        document.getElementById("floatingID").value = newState;
+        document.getElementById("buttonNum1").value = newState;
     }
   
   
