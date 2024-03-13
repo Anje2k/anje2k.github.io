@@ -13,13 +13,28 @@
 <br>
 <table>
     <tr>
-        <td colspan="2"><button onclick="clearBoard()">Clear</button></td>
-        <td id="winnerMsg"></td>
+        <td colspan="2"><button onclick="clearBoard()">Clear Board</button></td>
+        <td>Empty</td>
     </tr>
     <tr>
-        <td><button onclick="playerSpace('1')"> </button></td>
-        <td id="spacer"><button onclick="playerSpace('2')"></button></td>
-        <td><button onclick="playerSpace('3')">id="spacer"</button></td>
+        <td><button onclick="playerSpace('1')"> - </button></td>
+        <td><button onclick="playerSpace('2')"> - </button></td>
+        <td><button onclick="playerSpace('3')"> - </button></td>
+    </tr>
+    <tr>
+        <td><button onclick="playerSpace('4')" id="emptySpace"> - </button></td>
+        <td><button onclick="playerSpace('5')" id="blankSpace"> - </button></td>
+        <td><button onclick="playerSpace('6')" id="display"> - </button></td>
+    </tr>
+    <tr>
+        <td><button onclick="playerSpace('4')" id="emptySpace"></button></td>
+        <td><button onclick="playerSpace('5')" id="blankSpace"></button></td>
+        <td><button onclick="playerSpace('6')" id="display"></button></td>
+    </tr>
+    <tr>
+        <td><button onclick="playerSpace('7')"> - </button></td>
+        <td><button onclick="playerSpace('8')"> - </button></td>
+        <td><button onclick="playerSpace('9')"> - </button></td>
     </tr>
 </table>
 
@@ -30,7 +45,10 @@
 
 <script>
   const winnerMsg = "Me!";
-  const spacer = " ";
+  const emptySpace = " - ";
+  let blankSpace = " - ";
+
+  document.getElementById("display").value = blankSpace;
   
   
   /*const form = document.getElementById("nameForm");
