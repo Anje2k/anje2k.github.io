@@ -8,13 +8,13 @@
 </head>
 <body>
   <h1>This is the battlemap</h1>
-  <p>Right now it's just for Tic-Tac-Toe against a roboot </p>
+  <p>Right now it's just for Tic-Tac-Toe against a robit </p>
   
 <br>
 <table>
     <tr>
         <td colspan="2"><button onclick="clearBoard()">Clear Board</button></td>
-        <td></td>
+        <td><button id="myButton">Click Me!</button></td>
     </tr>
     <tr></tr>
     <tr>
@@ -45,7 +45,7 @@
 
 
 <script>
-    /*const button = document.getElementById("myButton");
+    const button = document.getElementById("myButton");
     let clickCount = 0;
     const colors = ["blue", "red", "green", "yellow"]; // Array of colors for the button
 
@@ -61,7 +61,7 @@
 
     // Update button color based on click count (cycles through the colors array)
     this.style.color = colors[clickCount % colors.length];
-    });*/
+    });
   
     function playerSpace(idNumber) {
         //let floatingID = "buttonNum" + idNumber;
