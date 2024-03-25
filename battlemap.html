@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>This is the battlemap</h1>
-  <p>Right now it's just for Tic-Tac-Toe against a robit </p>
+  <p>Right now it's just for Tic-Tac-Toe against a roobit </p>
   
 <br>
 <table>
@@ -18,9 +18,9 @@
     </tr>
     <tr></tr>
     <tr>
-        <td><button onclick="playerSpace('1')" id="buttonNum1" value="-"> - </button></td>
-        <td><button onclick="playerSpace('2')" id="buttonNum2" value="-"> - </button></td>
-        <td><button onclick="playerSpace('3')" id="buttonNum3" value="-"> - </button></td>
+        <td><button onclick="playerSpace1()" id="playerSpace"> - </button></td>
+        <td><button id="playerSpace" onclick="playerSpace2()"> - </button></td>
+        <td><button id="playerSpace"> - </button></td>
     </tr>
     <tr>
         <td><button onclick="playerSpace('4')" id="emptySpace"> - </button></td>
@@ -28,9 +28,9 @@
         <td><button onclick="playerSpace('6')" id="display" value=""> - </button></td>
     </tr>
     <tr>
-        <td><button onclick="playerSpace('4')" id="emptySpace"></button></td>
-        <td><button onclick="playerSpace('5')" id="blankSpace"></button></td>
-        <td><button onclick="playerSpace('6')" id="display" value="H"></button></td>
+        <td><button onclick="playerSpace('4')" id="playerSpace"></button></td>
+        <td><button onclick="playerSpace('5')" id="playerSpace"></button></td>
+        <td><button onclick="playerSpace('6')" id="playerSpace" value="H"></button></td>
     </tr>
     <tr>
         <td><button onclick="playerSpace('7')"> - </button></td>
@@ -88,7 +88,22 @@
   let blankSpace = " - ";
 
   document.getElementById("display").value = blankSpace;
-  
+    
+
+
+
+
+
+    //Change board to Xs and Os on click
+    const gameSpace = document.getElementById("playerSpace");
+    gameSpace.addEventListener("click", function() {
+        let currentValueState = gameSpace.value;
+        if(currentValueState === "X") {
+            this.textContent = "O";
+        } else {
+            this.textContent = "X";
+        }
+    });
   
   /*const form = document.getElementById("nameForm");
   form.addEventListener("submit", function(event) {
