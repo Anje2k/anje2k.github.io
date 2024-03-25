@@ -13,8 +13,8 @@
 <br>
 <table>
   <tr id="row1">
-    <td id="cell1">-</td>
-    <td id="cell2">-</td>
+    <td id="cell1"><button>-</button></td>
+    <td><button id="cell2">-</button></td>
     <td id="cell3">-</td>
   </tr>
   <tr id="row2">
@@ -53,7 +53,7 @@ cells.forEach(cell => {
 
 const resetButton = document.getElementById("resetButton");
 resetButton.addEventListener("click", function() {
-  cells.forEach(cell => cell.textContent = "");
+  cells.forEach(cell => cell.textContent = "-");
   currentPlayer = "X"; // Reset starting player
 });
     
