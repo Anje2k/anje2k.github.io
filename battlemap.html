@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>This is the battlemap</h1>
-  <p>Right now it's just for Tic-Tac-Toe against a roobit </p>
+  <p>Right now it's just for Tic-Tac-Toe against a roobut </p>
   
 <br>
 <table>
@@ -18,8 +18,8 @@
     </tr>
     <tr></tr>
     <tr>
-        <td><button onclick="playerSpace1()" id="playerSpace"> - </button></td>
-        <td><button id="playerSpace" onclick="playerSpace2()"> - </button></td>
+        <td><button onclick="playerSpace1()" id="playerSpace1"> - </button></td>
+        <td><button id="playerSpace2" onclick="playerSpace2()"> - </button></td>
         <td><button id="playerSpace"> - </button></td>
     </tr>
     <tr>
@@ -98,6 +98,26 @@
     const gameSpace = document.getElementById("playerSpace");
     gameSpace.addEventListener("click", function() {
         let currentValueState = gameSpace.value;
+        if(currentValueState === "X") {
+            this.textContent = "O";
+        } else {
+            this.textContent = "X";
+        }
+    });
+    //Change board to Xs and Os on click
+    const gameSpace1 = document.getElementById("playerSpace1");
+    gameSpace1.addEventListener("click", function() {
+        let currentValueState = gameSpace1.value;
+        if(currentValueState === "X") {
+            this.textContent = "O";
+        } else {
+            this.textContent = "X";
+        }
+    });
+    //Change board to Xs and Os on click
+    const gameSpace2 = document.getElementById("playerSpace2");
+    gameSpace2.addEventListener("click", function() {
+        let currentValueState = gameSpace2.value;
         if(currentValueState === "X") {
             this.textContent = "O";
         } else {
