@@ -12,127 +12,49 @@
   
 <br>
 <table>
-    <tr>
-        <td colspan="2"><button onclick="clearBoard()">Clear Board</button></td>
-        <td><button id="myButton">Click Me!</button></td>
-    </tr>
-    <tr></tr>
-    <tr>
-        <td><button onclick="playerSpace1()" id="playerSpace1"> - </button></td>
-        <td><button id="playerSpace2" onclick="playerSpace2()"> - </button></td>
-        <td><button id="playerSpace"> - </button></td>
-    </tr>
-    <tr>
-        <td><button onclick="playerSpace('4')" id="emptySpace"> - </button></td>
-        <td><button onclick="playerSpace('5')" id="blankSpace"> - </button></td>
-        <td><button onclick="playerSpace('6')" id="display" value=""> - </button></td>
-    </tr>
-    <tr>
-        <td><button onclick="playerSpace('4')" id="playerSpace"></button></td>
-        <td><button onclick="playerSpace('5')" id="playerSpace"></button></td>
-        <td><button onclick="playerSpace('6')" id="playerSpace" value="H"></button></td>
-    </tr>
-    <tr>
-        <td><button onclick="playerSpace('7')"> - </button></td>
-        <td><button onclick="playerSpace('8')"> - </button></td>
-        <td><button onclick="playerSpace('9')"> - </button></td>
-    </tr>
+  <tr id="row1">
+    <td id="cell1"></td>
+    <td id="cell2"></td>
+    <td id="cell3"></td>
+  </tr>
+  <tr id="row2">
+    <td id="cell4"></td>
+    <td id="cell5"></td>
+    <td id="cell6"></td>
+  </tr>
+  <tr id="row3">
+    <td id="cell7"></td>
+    <td id="cell8"></td>
+    <td id="cell9"></td>
+  </tr>
 </table>
-
+<button id="resetButton">Reset Game</button>
 
 </body>
 </html>
 
 
+
+
 <script>
-    const button = document.getElementById("myButton");
-    let clickCount = 0;
-    const colors = ["blue", "red", "green", "yellow"]; // Array of colors for the button
 
-    button.addEventListener("click", function() {
-    clickCount++; // Increment click count on each click
+const cells = document.querySelectorAll("td");
+let currentPlayer = "X"; // Starting player
 
-    // Update button text based on click count
-    if (clickCount % 4 === 0) {
-      this.textContent = "Click Me!";
-    } else {
-        this.textContent = "Clicked " + clickCount + " times!";
+cells.forEach(cell => {
+  cell.addEventListener("click", function() {
+    if (this.textContent === "") { // Check if cell is empty
+      this.textContent = currentPlayer;
+      // Switch player after each click
+      currentPlayer = currentPlayer === "X" ? "O" : "X";
     }
+  });
+});
 
-    // Update button color based on click count (cycles through the colors array)
-    this.style.color = colors[clickCount % colors.length];
-    });
-  
-    function playerSpace(idNumber) {
-        //let floatingID = "buttonNum" + idNumber;
-        let currentState = "-"
-        let newState = "O"
-        currentState = document.getElementById("buttonNum1").value;
-
-        if (currentState === "-") {
-            newState = "X";
-        } else if (currentState === "O") {
-            newState = "X";
-        } else if (currentState === "X") {
-            newState = "O";
-        }
-
-        document.getElementById("buttonNum1").value = newState;
-    }
-  
-  
-  
-  
-  const winnerMsg = "Me!";
-  const emptySpace = " - ";
-  let blankSpace = " - ";
-
-  document.getElementById("display").value = blankSpace;
+const resetButton = document.getElementById("resetButton");
+resetButton.addEventListener("click", function() {
+  cells.forEach(cell => cell.textContent = "");
+  currentPlayer = "X"; // Reset starting player
+});
     
-
-
-
-
-
-    //Change board to Xs and Os on click
-    const gameSpace = document.getElementById("playerSpace");
-    gameSpace.addEventListener("click", function() {
-        let currentValueState = gameSpace.value;
-        if(currentValueState === "X") {
-            this.textContent = "O";
-        } else {
-            this.textContent = "X";
-        }
-    });
-    //Change board to Xs and Os on click
-    const gameSpace1 = document.getElementById("playerSpace1");
-    gameSpace1.addEventListener("click", function() {
-        let currentValueState = gameSpace1.value;
-        if(currentValueState === "X") {
-            this.textContent = "O";
-        } else {
-            this.textContent = "X";
-        }
-    });
-    //Change board to Xs and Os on click
-    const gameSpace2 = document.getElementById("playerSpace2");
-    gameSpace2.addEventListener("click", function() {
-        let currentValueState = gameSpace2.value;
-        if(currentValueState === "X") {
-            this.textContent = "O";
-        } else {
-            this.textContent = "X";
-        }
-    });
-  
-  /*const form = document.getElementById("nameForm");
-  form.addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission behavior
-
-    const userName = document.getElementById("userName").value;
-    localStorage.setItem("userName", userName);
-
-    // Optionally, redirect to another page after storing the name
-    window.location.href = "aboutus.html";
-  });*/
 </script>
